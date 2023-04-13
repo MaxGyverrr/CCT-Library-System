@@ -18,7 +18,7 @@ public class CctLibrarySystem {
 	 * @throws IOException
 	 */
 	public static String printMainScreen() throws IOException {
-		System.out.println("#### Welcome to CCT Library System ####");
+		System.out.println("##### Welcome to CCT Library System #####");
 		System.out.println("---------------------------------------");
 		System.out.println("1) Books");
 		System.out.println("2) Students");
