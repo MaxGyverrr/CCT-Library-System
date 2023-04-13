@@ -8,7 +8,7 @@ import java.io.IOException;
 
 /**
  *
- * @author Max William
+ * @author Max William / Renan Borges
  */
 public class CctLibrarySystem {
 
