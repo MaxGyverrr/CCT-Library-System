@@ -37,7 +37,7 @@ public class CctLibrarySystem {
 	 */
 	public static void main(String[] args) {
 		
-		BookPage bookPage = new BookPege();
+		BookPage bookPage = new BookPage();
 		BorrowPage borrowPage = new BorrowPage();
 		WaitingPage waitPage = new WaitingPage();
 		StudentPage studentPage = new StudentPage();
