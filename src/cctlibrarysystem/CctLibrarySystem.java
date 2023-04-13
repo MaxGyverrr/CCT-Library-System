@@ -64,6 +64,7 @@ public class CctLibrarySystem {
 		} catch (Exception e) {
 			System.err.println("Error: " + e.getMessage());
 		}
+                System.out.println("teste");
 	}
 
 }
