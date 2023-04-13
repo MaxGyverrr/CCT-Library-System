@@ -12,7 +12,7 @@ import java.util.List;
 public class FileUtils {
 	
 	/**
-	 * Load any CSV content into a List<String[]>
+	 * Load CSV content into a List<String[]>
 	 * @param path
 	 * @return
 	 */
