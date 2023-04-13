@@ -19,16 +19,16 @@ public class CctLibrarySystem {
 	 */
 	public static String printMainScreen() throws IOException {
 		System.out.println("#### Welcome to CCT Library System ####");
-		System.out.println("");
+		System.out.println("---------------------------------------");
 		System.out.println("1) Books");
-		System.out.println("3) Students");
-		System.out.println("5) Borrows list");
-		System.out.println("7) Waiting list");
-		System.out.println("");
+		System.out.println("2) Students");
+		System.out.println("3) Borrows List");
+		System.out.println("4) Waiting List");
+		System.out.println("-------");
 		System.out.println("Q) Exit");
-		System.out.println("");
-		System.out.print("-> ");
-		return Window.read();
+		System.out.println("-------");
+		System.out.print("--> ");
+		return Page.read();
 	}
 
 	/**
@@ -37,10 +37,10 @@ public class CctLibrarySystem {
 	 */
 	public static void main(String[] args) {
 		
-		BookWindow bookWindow = new BookWindow();
-		BorrowWindow borrowWindow = new BorrowWindow();
-		WaitingWindow waitWindow = new WaitingWindow();
-		ReaderWindow readerWindow = new ReaderWindow();
+		BookPage bookPage = new BookPege();
+		BorrowPage borrowPage = new BorrowPage();
+		WaitingPage waitPage = new WaitingPage();
+		StudentPage studentPage = new StudentPage();
 		
 		try {
 			String mainResponse = null;
@@ -48,16 +48,16 @@ public class CctLibrarySystem {
 		        mainResponse = printMainScreen();
 		        switch(mainResponse.toUpperCase()) {
 		        case "1":
-		        	bookWindow.show();
+		        	bookPage.show();
+		        	break;
+		        case "2":
+		        	studentPage.show();
 		        	break;
 		        case "3":
-		        	readerWindow.show();
+		        	borrowPage.show();
 		        	break;
-		        case "5":
-		        	borrowWindow.show();
-		        	break;
-		        case "7":
-		        	waitWindow.show();
+		        case "4":
+		        	waitPage.show();
 		        	break;
 		        }
 			} while (mainResponse != null && !mainResponse.equalsIgnoreCase("Q"));
