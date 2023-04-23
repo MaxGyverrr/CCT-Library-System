@@ -167,7 +167,8 @@ public class StudentPage {
             }
         }
     }
-
+    
+    //Using Linear Search, method created by Renan. 
     public void searchStudents() throws IOException {
         Scanner scanner = new Scanner(System.in);
 
@@ -203,6 +204,7 @@ public class StudentPage {
         }
     }
 
+    // Using Bubble Sort, method created by Max
     private List<Students> sortStudentByName(List<Students> students) {
         for (int i = 0; i < students.size() - 1; i++) {
             for (int j = 0; j < students.size() - i - 1; j++) {
