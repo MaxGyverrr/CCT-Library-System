@@ -6,9 +6,8 @@ package entities;
 
 /**
  *
- * @author Maxwell
- * @author Renan
+ * @author renan
  */
-public class Books {
+public class Students {
     
 }
