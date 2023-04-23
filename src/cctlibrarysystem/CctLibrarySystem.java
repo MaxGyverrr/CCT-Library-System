@@ -16,7 +16,7 @@ import pages.StudentPage;
  * @author Maxwell
  * @author Renan
  */
-public class BibliotecaNova {
+    public class CctLibrarySystem {
 
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
