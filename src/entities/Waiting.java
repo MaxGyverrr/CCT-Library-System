@@ -6,8 +6,8 @@ package entities;
 
 /**
  *
- * @author Max William
+ * @author renan
  */
-public class Borrowings {
+public class Waiting {
     
 }
