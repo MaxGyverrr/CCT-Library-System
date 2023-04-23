@@ -9,13 +9,15 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import search.Search;
 
 /**
- * 
+ *
  * @author Maxwell
  * @author Renan
  */
@@ -134,7 +136,12 @@ public class StudentPage {
         if (sortOption == 1) {
             sortStudentByName(studentList);
         } else if (sortOption == 2) {
-            sortStudentByID(studentList);
+
+            List<Students> sortid = new ArrayList<>();
+
+            Comparator<Students> byID = Comparator.comparing(Students::getId);
+            Collections.sort(sortid, byID);
+
         } else {
             System.out.println("---------------");
             System.out.println("Invalid option.");
@@ -211,20 +218,4 @@ public class StudentPage {
         return students;
     }
 
-    private List<Students> sortStudentByID(List<Students> students) {
-        for (int i = 0; i < students.size() - 1; i++) {
-            for (int j = 0; j < students.size() - i - 1; j++) {
-                // Compare IDs
-                if (students.get(j + 1).getId().compareTo(students.get(j).getId()) < 0) {
-                    // Swap students in-place
-                    Students temp = students.get(j);
-                    students.set(j, students.get(j + 1));
-                    students.set(j + 1, temp);
-                }
-            }
-        }
-        return students;
-    }
-
 }
-
